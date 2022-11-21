@@ -116,14 +116,16 @@ nav{
 #numerito{
 
     background-color: var(--color-third);
-    padding: 0.15rem;
+    padding: 0.2rem;
     border-radius: 0.2rem;
     color: white;
     font-size: 1.2rem;
+    
 }
 
 .volver{
     display: block;
+    font-size: 1.3rem;
 }
 
 main{
@@ -135,23 +137,26 @@ main{
 }
 
 .titulo-principal{
-    color: var(--color-main);
-    font-size: 2rem;
+    color: var(--color-third);
+    font-size: 3rem;
     margin-bottom: 2rem;
     text-align: center;
+    font-family: 'Russo One', sans-serif;
 }
 
 
 .contenedor-productos{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 5rem;
 }
 
 .productos{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 0px 0px 20px grey;
+    border-radius: 1rem;
 }
 
 .producto-imagen{
@@ -218,7 +223,15 @@ footer{
 .carrito-vacio{
     color: var(--color-main);
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
+    
+}
+
+.carrito-vacio-foto{
+    margin-top: 8rem;
+    max-width: 50%;
+    filter: opacity(60%);
     
 }
 

@@ -108,11 +108,12 @@ function comprarCarrito() {
 
     productosEnCarrito.length = 0
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito))
-
-        contenedorCarritoVacio.classList.add("disable")
-        contenedorCarritoProductos.classList.add("disable")
-        contenedorCarritoAcciones.classList.add("disable")
-        contenedorCarritoComprado.classList.remove("disable")
+    swal("Compra completada", "Gracias por tu compra!", "success");
+    
+    contenedorCarritoVacio.classList.remove("disable")
+    contenedorCarritoProductos.classList.add("disable")
+    contenedorCarritoAcciones.classList.add("disable")
+    contenedorCarritoComprado.classList.remove("disable")
     
 
 }

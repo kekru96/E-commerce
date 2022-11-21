@@ -8,8 +8,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Russo+One&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300&family=Rubik+Glitch&display=swap" rel="stylesheet">
-    <title>Tecnoshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Orbitron&family=Russo+One&display=swap" rel="stylesheet">
+    <title>Tecnoshop - Carrito</title>
 </head>
 <body>
     
@@ -23,14 +29,16 @@
 
             <nav>
                 <ul class="menu">
-                    <li><a class="boton-menu volver" href="index.html"><i class="bi bi-arrow-left"></i> Seguir comprando</a></li>
+                    <li><a class="boton-menu volver" href="index.html"><i class="bi bi-arrow-left-circle"></i> Seguir comprando</a></li>
                 </ul>
             </nav>
         </aside>
         <main>
             <h2 class="titulo-principal">Carrito</h2>
             <div class="container-carrito">
-                <p id="carrito-vacio" class="carrito-vacio">Tu carrito esta vacio <i class="bi bi-emoji-frown"></i></p>
+                <p id="carrito-vacio" class="carrito-vacio">Tu carrito esta vacio <i class="bi bi-emoji-frown"></i> <br>
+                    <img class="carrito-vacio-foto" src="./fotos/shoppinh-Cart-Empty.png" alt="Carrito">
+                </p>
 
                 <div id="carritos-productos" class="carrito-productos disable">
 
@@ -62,5 +70,6 @@
 
 
     <script src="carrito.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>

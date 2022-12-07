@@ -201,6 +201,12 @@ const botonesCategorias = document.querySelectorAll(".boton-categorias")
 const tituloPrincipal = document.querySelector("#titulo-principal")
 let botonesAgregar = document.querySelectorAll(".producto-agregar")
 const numerito = document.querySelector("#numerito")
+const menuResponsive = document.querySelector(".desplegar-menu")
+const cerrarMenu = document.querySelector(".boton-cerrar")
+const main = document.querySelector(".main")
+const aside = document.querySelector(".aside")
+const hamburguesa = document.querySelector(".bi-list")
+const equis = document.querySelector(".bi-x-lg")
 
 function cargarProductos(productosElegidos){
 
@@ -231,8 +237,8 @@ cargarProductos(productos);
 botonesCategorias.forEach(boton => {
     boton.addEventListener("click", (e) => {
 
-        botonesCategorias.forEach(boton => boton.classList.remove("active"))
 
+        botonesCategorias.forEach(boton => boton.classList.remove("active"))
         e.currentTarget.classList.add("active");
 
         if (e.currentTarget.id != "todos"){
@@ -302,3 +308,51 @@ function actualizarBotonesAgregar(){
     let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumerito
     }
+
+
+    /*
+    function desplegarMenu() {
+        main.classList.add("desaparecer")
+        aside.classList.remove("desaparecer")
+        hamburguesa.classList.add("desaparecer")
+        equis.classList.remove("desaparecer")
+        
+    }
+    function cerrarMenuX() {
+        main.classList.remove("desaparecer")
+        aside.classList.add("desaparecer")
+        hamburguesa.classList.remove("desaparecer")
+        equis.classList.add("desaparecer")
+    }
+
+   
+
+
+
+    function mq(x) {
+        if (x.matches) { 
+            aside.classList.add("desaparecer")
+            hamburguesa.classList.remove("desaparecer")
+            menuResponsive.addEventListener("click", desplegarMenu)
+            cerrarMenu.addEventListener("click", cerrarMenuX)
+            
+         
+            
+        } else {
+            aside.classList.remove("desaparecer")
+            main.classList.remove("desaparecer")
+            hamburguesa.classList.add("desaparecer")
+            equis.classList.add("desaparecer")
+        }
+      }
+
+      
+      const x = window.matchMedia("(max-width: 700px)")
+      
+
+      mq(x) 
+      
+      */
+      
+      
+

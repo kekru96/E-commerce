@@ -21,6 +21,10 @@ ul{
     list-style-type: none;
 }
 
+li{
+    list-style-type: none;
+}
+
 a{
     text-decoration: none;
 }
@@ -49,8 +53,9 @@ aside{
 nav{
     display: flex;
     flex-direction: column;
-    margin-top: 5rem;
     height: 100%;
+    justify-content: center;
+
     
 }
 
@@ -69,24 +74,24 @@ nav{
     color: var(--color-third);
 }
 
+
 .boton-menu{
     background-color: transparent;
     border: 0;
     color: var(--color-secondary);
-    font-size: 1rem;
     cursor: pointer;
     width: 100%;
     padding: 1rem;
     text-align: left;
-    font-size: 1rem;
-    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-family: 'Teko', sans-serif;
+    font-weight: bold;
 
 }
 
 
 .boton-menu:hover{
     color: var(--color-third);
-    font-weight: bold;
     border-top-left-radius: .5rem;
     border-bottom-left-radius: .5rem;
     background-color: var(--color-secondary);
@@ -107,25 +112,35 @@ nav{
 
 .li-carrito{
     margin-top:2rem;
+    
+    
 }
 
 .boton-carrito{
-    display: block;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: var(--color-third);
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%);
+    
 }
 
 #numerito{
-
-    background-color: var(--color-third);
-    padding: 0.2rem;
-    border-radius: 0.2rem;
-    color: white;
     font-size: 1.2rem;
     
 }
 
+.bi-cart4{
+    background-color: var(--color-main);
+    padding: .5rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+}
+
 .volver{
     display: block;
-    font-size: 1.3rem;
 }
 
 main{
@@ -178,11 +193,12 @@ main{
 
 .producto-precio{
     font-size: 1.5rem;
-    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .producto-titulo{
     font-size: 1.5rem;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .producto-agregar{
@@ -196,6 +212,7 @@ main{
     border-radius: .5rem;
     cursor: pointer;
     transition: all .5s;
+    font-family: 'Russo One', sans-serif;
 }
 
 .producto-agregar:hover{
@@ -284,7 +301,8 @@ footer{
     border-radius: 1rem;
     color: white;
     cursor: pointer;
-    text-transform: uppercase;;
+    text-transform: uppercase;
+    font-family: 'Russo One', sans-serif;
 }
 
 .carrito-acciones-total{
@@ -293,6 +311,7 @@ footer{
     justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
+    font-family: 'Russo One', sans-serif;
 }
 
 
@@ -303,7 +322,8 @@ footer{
     border-radius: 1rem;
     color: white;
     cursor: pointer;
-    text-transform: uppercase;;
+    text-transform: uppercase;
+    font-family: 'Russo One', sans-serif;
 }
 
 .carrito-total{
@@ -316,4 +336,80 @@ footer{
 
 .disable{
     display: none;
+}
+
+small{
+    font-family: 'Russo One', sans-serif;
+}
+
+.desaparecer{
+    display: none;
+}
+
+/* Opiniones */
+
+.contenedor-opiniones{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+#opiniones{
+    background-color: rgb(119, 37, 12);
+    clip-path: 0;
+    
+}
+
+.tarjeta-opiniones{
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 1rem;
+    }
+
+/* Responsive */
+
+
+@media only screen and (max-width: 1200px){
+
+    .contenedor-productos{
+    grid-template-columns: 1fr;
+}
+
+.titulo-principal{
+    font-size: 1.2rem;
+}
+
+aside{
+    padding-left: 0.5rem;
+}
+
+.logo h1{
+    font-size: 0.7rem;
+}
+
+.boton-menu{
+    font-size: 1rem;
+}
+
+.producto-titulo{
+    font-size: 1rem;
+}
+
+main{
+    padding: 1rem;
+}
+
+/* Carrito */
+
+.carrito-producto{
+    flex-direction: column;
+    gap: 2rem;
+    width: auto;
+}
+
+/* Opiniones*/
+
+.contenedor-opiniones{
+    grid-template-columns: 1fr;
+}
 }
